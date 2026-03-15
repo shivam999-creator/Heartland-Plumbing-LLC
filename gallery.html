@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Work | Cape Coral Plumbing Photos | Heartland Plumbing</title>
+  <meta name="description" content="View our gallery of plumbing projects in Cape Coral, Fort Myers, and Naples. See our work on water heaters, repiping, and bathroom renovations.">
+  <link rel="canonical" href="https://heartlandplumbingfl.com/gallery.html">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+    .gallery-item { border-radius: 8px; overflow: hidden; cursor: pointer; position: relative; }
+    .gallery-item img { width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s; }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(10, 37, 64, 0.8); color: white; padding: 10px; transform: translateY(100%); transition: transform 0.3s; }
+    .gallery-item:hover .gallery-overlay { transform: translateY(0); }
+    .filter-container { display: flex; justify-content: center; gap: 10px; margin-bottom: 40px; flex-wrap: wrap; }
+    .filter-btn { background: transparent; border: 2px solid var(--primary); color: var(--primary); padding: 8px 16px; border-radius: 20px; cursor: pointer; font-weight: 600; transition: 0.3s; }
+    .filter-btn.active, .filter-btn:hover { background: var(--primary); color: white; }
+    
+    .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 10000; display: none; justify-content: center; align-items: center; }
+    .lightbox.active { display: flex; }
+    .lightbox-img { max-width: 90%; max-height: 90%; border-radius: 8px; }
+    .lightbox-close { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; }
+    .lightbox-prev, .lightbox-next { position: absolute; top: 50%; transform: translateY(-50%); color: white; font-size: 50px; cursor: pointer; user-select: none; padding: 20px; }
+    .lightbox-prev { left: 10px; } .lightbox-next { right: 10px; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Heartland Plumbing</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html" style="color: var(--secondary);">Gallery</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="service-areas.html">Areas</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:2393337807" class="phone-link">📞 (239) 333-7807</a>
+      </div>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <div class="menu-overlay"></div>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="service-areas.html">Areas</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <section class="hero" style="min-height: 30vh; padding: 120px 0 40px; background-image: url('https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200&q=80');">
+    <div class="container hero-content text-center" style="margin: 0 auto;">
+      <h1 class="hero-title">Our Work</h1>
+      <p class="hero-subtitle mt-1">See the quality of our plumbing projects across SWFL.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="filter-container animate-on-scroll">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="water-heaters">Water Heaters</button>
+        <button class="filter-btn" data-filter="repiping">Repiping</button>
+        <button class="filter-btn" data-filter="renovations">Renovations</button>
+      </div>
+
+      <div class="gallery-grid animate-on-scroll">
+        <div class="gallery-item" data-category="water-heaters">
+          <img src="https://images.unsplash.com/photo-1613214049841-028981a2eb71?w=800&q=80" alt="Tankless Water Heater Installation">
+          <div class="gallery-overlay">Tankless Water Heater Install</div>
+        </div>
+        <div class="gallery-item" data-category="repiping">
+          <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&q=80" alt="PEX Repiping">
+          <div class="gallery-overlay">Whole-Home PEX Repipe</div>
+        </div>
+        <div class="gallery-item" data-category="renovations">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80" alt="Bathroom Renovation">
+          <div class="gallery-overlay">Master Bath Plumbing</div>
+        </div>
+        <div class="gallery-item" data-category="renovations">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80" alt="Kitchen Sink Install">
+          <div class="gallery-overlay">Kitchen Sink & Disposal</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox">
+    <span class="lightbox-close">✕</span>
+    <span class="lightbox-prev">‹</span>
+    <img src="" alt="Gallery Image" class="lightbox-img">
+    <span class="lightbox-next">›</span>
+  </div>
+
+  <footer class="footer">
+    <div class="container text-center">
+      <p>&copy; 2026 Heartland Plumbing LLC. All Rights Reserved. | <a href="sitemap.xml">Sitemap</a></p>
+    </div>
+  </footer>
+
+  <div class="mobile-bottom-bar">
+    <a href="tel:2393337807" class="call-btn">📞 Call Now</a>
+    <a href="contact.html" class="quote-btn">📋 Free Quote</a>
+  </div>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/forms.js" defer></script>
+  <script type="module" src="/js/chatbot.js"></script>
+</body>
+</html>

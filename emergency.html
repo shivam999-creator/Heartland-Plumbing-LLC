@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24/7 Emergency Plumber Cape Coral, FL | Heartland Plumbing</title>
+  <meta name="description" content="Plumbing emergency in Cape Coral or Fort Myers? Call Heartland Plumbing at (239) 333-7807 for 24/7 rapid response. Burst pipes, leaks, overflows.">
+  <link rel="canonical" href="https://heartlandplumbingfl.com/emergency.html">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    :root { --primary: #EF4444; --secondary: #B91C1C; --accent: #111827; }
+    .hero { background: #EF4444; }
+    .btn-emergency { background: #111827; color: white; font-size: 1.2rem; padding: 20px; }
+    .btn-emergency:hover { background: #000; transform: scale(1.05); }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo" style="color: var(--primary);">Heartland Plumbing</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:2393337807" class="btn btn-emergency" style="padding: 10px 20px; font-size: 1rem;">🚨 (239) 333-7807</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" style="min-height: 50vh; padding: 150px 0 80px;">
+    <div class="container hero-content text-center" style="margin: 0 auto;">
+      <h1 class="hero-title" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">24/7 EMERGENCY PLUMBING</h1>
+      <p class="hero-subtitle mt-1" style="font-size: 1.5rem; font-weight: 700;">Serving Lee & Collier County</p>
+      <div class="mt-3 animate-scale">
+        <a href="tel:2393337807" class="btn btn-emergency" style="font-size: 2rem; border-radius: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+          CALL NOW: (239) 333-7807
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2">
+        <div class="animate-left">
+          <h2 class="section-title" style="color: var(--primary);">Don't Wait. We're Ready.</h2>
+          <p class="mt-1">Water damage spreads fast. If you have a burst pipe, severe leak, or sewage backup, turn off your main water valve and call us immediately.</p>
+          <ul style="list-style: none; margin: 20px 0;">
+            <li style="margin-bottom: 15px; font-size: 1.1rem;">🚨 Burst or Leaking Pipes</li>
+            <li style="margin-bottom: 15px; font-size: 1.1rem;">🚨 Overflowing Toilets</li>
+            <li style="margin-bottom: 15px; font-size: 1.1rem;">🚨 No Hot Water</li>
+            <li style="margin-bottom: 15px; font-size: 1.1rem;">🚨 Sewer Line Backups</li>
+          </ul>
+        </div>
+        <div class="animate-right">
+          <div style="background: #FEE2E2; padding: 40px; border-radius: 12px; border: 2px solid var(--primary);">
+            <h3 style="margin-bottom: 20px; color: var(--primary);">Request Immediate Dispatch</h3>
+            <form action="https://formspree.io/f/mwvrpwrb" method="POST" id="emergencyForm">
+              <input type="hidden" name="_subject" value="🚨 EMERGENCY Lead from Website">
+              <input type="hidden" name="_next" value="thankyou.html">
+              <div style="display:none"><input type="text" name="_gotcha"></div>
+
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="tel" name="phone" placeholder="Phone — We'll Call ASAP" required>
+              <input type="text" name="address" placeholder="Service Address" required>
+              <select name="emergency_type" required>
+                <option value="" disabled selected>What's the Emergency?</option>
+                <option>Burst Pipe / Major Leak</option>
+                <option>Flooding</option>
+                <option>No Hot Water</option>
+                <option>Sewage Backup</option>
+                <option>Clogged Drain — Overflowing</option>
+                <option>Other Emergency</option>
+              </select>
+              <button type="submit" class="btn btn-emergency btn-full">🚨 Send Alert</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/forms.js" defer></script>
+</body>
+</html>
