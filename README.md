@@ -1,20 +1,37 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Heartland Plumbing AI Website
 
-# Run and deploy your AI Studio app
+This repository contains the source code for the Heartland Plumbing website, featuring a Gemini-powered AI receptionist.
 
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/1d64d4b5-d35f-49dc-9a57-da760e562bfc
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
+## Local Development
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+   ```bash
+   npm install
+   ```
+
+2. Create a `.env` file in the root directory and add your Gemini API key:
+   ```env
+   GEMINI_API_KEY=your_api_key_here
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## Deployment to Netlify
+
+This project is pre-configured for easy deployment to Netlify.
+
+1. Push this repository to GitHub, GitLab, or Bitbucket.
+2. Log in to [Netlify](https://app.netlify.com/) and click **"Add new site"** -> **"Import an existing project"**.
+3. Connect your Git provider and select this repository.
+4. Netlify will automatically detect the build settings from the `netlify.toml` file:
+   - **Build command:** `npm run build`
+   - **Publish directory:** `dist`
+5. **Important:** Before deploying, click on **"Advanced build settings"** (or go to Site Settings > Environment Variables after creation) and add your Gemini API key:
+   - **Key:** `GEMINI_API_KEY`
+   - **Value:** `your_api_key_here`
+6. Click **"Deploy site"**.
+
+Your site will now be live with a fully functional AI chatbot!
